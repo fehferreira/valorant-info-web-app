@@ -21,7 +21,4 @@ public class RoleResponseDTO {
     @JsonProperty("displayIcon")
     private String displayIcon;
 
-    @JsonProperty("fullPortrait")
-    private String fullPortrait;
-
 }

@@ -11,7 +11,16 @@ public class AbilitiesResponseDTO {
 
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("abilities")
-    private List<AbilityResponseDTO> abilities;
+    @JsonProperty("slot")
+    private String slot;
+
+    @JsonProperty("displayName")
+    private String displayName;
+
+    @JsonProperty("description")
+    private String description;
+
+    @JsonProperty("displayIcon")
+    private String displayIcon;
 
 }
