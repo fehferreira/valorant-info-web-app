@@ -16,4 +16,9 @@ public class MapsService {
         return client.getMaps(Constants.Variable.BRAZILIAN_LANGUAGE);
     }
 
+    public MapsResponseDTO getFindByUUID(String uuid) {
+        return client.getMaps(
+                uuid,
+                Constants.Variable.BRAZILIAN_LANGUAGE);
+    }
 }

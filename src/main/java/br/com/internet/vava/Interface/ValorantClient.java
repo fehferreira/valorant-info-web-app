@@ -27,4 +27,10 @@ public interface ValorantClient {
     MapsResponseDTO getMaps(
             @RequestParam(value = "language", required = false) String language
     );
+
+    @RequestMapping(value = "/maps/{uuid}", method = GET)
+    MapsResponseDTO getMaps(
+            @PathVariable String uuid,
+            @RequestParam(value = "language", required = false) String language
+    );
 }
