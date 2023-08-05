@@ -7,7 +7,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Getter @Setter
-public class DataResponseDTO {
+public class DataAgentsResponseDTO {
 
     private static final long serialVersionUID = 1L;
 
