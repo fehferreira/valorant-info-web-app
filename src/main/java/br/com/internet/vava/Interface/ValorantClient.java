@@ -39,4 +39,10 @@ public interface ValorantClient {
     WeaponsResponseDTO getWeapons(
             @RequestParam(value = "language", required = false) String language
     );
+
+    @RequestMapping(value = "/weapons/{uuid}", method = GET)
+    WeaponsResponseDTO getWeaponByUUID(
+            @PathVariable String uuid,
+            @RequestParam(value = "language", required = false) String language
+    );
 }

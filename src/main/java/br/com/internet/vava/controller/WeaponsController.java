@@ -1,8 +1,6 @@
 package br.com.internet.vava.controller;
 
-import br.com.internet.vava.dto.response.maps.MapsResponseDTO;
 import br.com.internet.vava.dto.response.weapons.WeaponsResponseDTO;
-import br.com.internet.vava.service.MapsService;
 import br.com.internet.vava.service.WeaponsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,5 +20,9 @@ public class WeaponsController {
         return weaponsService.getWeapons();
     }
 
+    @RequestMapping(path = "/{uuid}", method = RequestMethod.GET)
+    public WeaponsResponseDTO getWeaponByUUID(@PathVariable String uuid){
+        return weaponsService.getWeaponByUUID(uuid);
+    }
 
 }
