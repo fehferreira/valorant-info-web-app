@@ -19,9 +19,11 @@ public class AgentsController {
     public AgentsResponseDTO getAgents(){
         return agentsService.getAgents();
     }
+
     @RequestMapping(path = "/{uuid}", method = RequestMethod.GET)
     public AgentsResponseDTO getAgentByUUID(@PathVariable String uuid){
         return agentsService.getAgentsByUUID(uuid);
     }
+
 
 }

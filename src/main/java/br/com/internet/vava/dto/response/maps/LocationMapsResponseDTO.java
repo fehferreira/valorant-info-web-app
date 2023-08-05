@@ -4,14 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter @Setter
 public class LocationMapsResponseDTO {
 
     private static final long serialVersionUID = 1L;
 
     @JsonProperty("x")
-    private String x;
+    private BigDecimal x;
 
     @JsonProperty("y")
-    private String y;
+    private BigDecimal y;
 }

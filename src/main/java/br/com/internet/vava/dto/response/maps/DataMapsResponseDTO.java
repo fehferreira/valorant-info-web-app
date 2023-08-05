@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter @Setter
@@ -27,16 +28,16 @@ public class DataMapsResponseDTO {
     private String splash;
 
     @JsonProperty("xMultiplier")
-    private String xMultiplier;
+    private BigDecimal xMultiplier;
 
     @JsonProperty("yMultiplier")
-    private String yMultiplier;
+    private BigDecimal yMultiplier;
 
     @JsonProperty("xScalarToAdd")
-    private String xScalarToAdd;
+    private BigDecimal xScalarToAdd;
 
     @JsonProperty("yScalarToAdd")
-    private String yScalarToAdd;
+    private BigDecimal yScalarToAdd;
 
     @JsonProperty("callouts")
     private List<CalloutsMapsResponseDTO> callouts;
