@@ -2,6 +2,7 @@ package br.com.internet.vava.Interface;
 
 import br.com.internet.vava.dto.response.agents.AgentsResponseDTO;
 import br.com.internet.vava.dto.response.maps.MapsResponseDTO;
+import br.com.internet.vava.dto.response.weapons.WeaponsResponseDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +30,13 @@ public interface ValorantClient {
     );
 
     @RequestMapping(value = "/maps/{uuid}", method = GET)
-    MapsResponseDTO getMaps(
+    MapsResponseDTO getMapByUUID(
             @PathVariable String uuid,
+            @RequestParam(value = "language", required = false) String language
+    );
+
+    @RequestMapping(value = "/weapons", method = GET)
+    WeaponsResponseDTO getWeapons(
             @RequestParam(value = "language", required = false) String language
     );
 }

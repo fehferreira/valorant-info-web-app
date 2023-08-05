@@ -45,10 +45,10 @@ public class WeaponStatsResponseDTO {
     private AdsStatsResponseDTO adsStatsResponseDTO;
 
     @JsonProperty("altShotgunStats")
-    private String altShotgunStats;
+    private AltShotgunStats altShotgunStats;
 
     @JsonProperty("airBurstStats")
-    private String airBurstStats;
+    private AirBurstStats airBurstStats;
 
     @JsonProperty("damageRanges")
     private List<DamageRangesResponseDTO> damageRangesList;
